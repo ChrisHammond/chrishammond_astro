@@ -31,18 +31,19 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: "Chris Hammond's Web Site",
+      title: "Some of my projects",
       links: [
-        { text: 'About', href: '/about' },
-        { text: 'Contact', href: '/contact' },
+        
+        { text: 'AutocrossBlog.com', href: "https://www.autocrossblog.com"},
+        { text: 'CollectorOfJack.com', href: "https://www.CollectorOfJack.com"},
+        { text: 'RainbowMarks Photography', href: "https://rainbowmarks.com"},
       ],
     },
   ],
   secondaryLinks: [
-    { text: 'AutocrossBlog.com', href: "https://www.autocrossblog.com"},
-    { text: 'CollectorOfJack.com', href: "https://www.CollectorOfJack.com"},
-    { text: 'RainbowMarks Photography', href: "https://rainbowmarks.com"},
-    
+   
+    { text: 'About', href: '/about' },
+        { text: 'Contact', href: '/contact' },
     { text: 'Terms', href: getPermalink('/terms') },
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
