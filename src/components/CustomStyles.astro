@@ -1,65 +1,51 @@
----
-import '@fontsource-variable/inter';
-
-// 'DM Sans'
-// Nunito
-// Dosis
-// Outfit
-// Roboto
-// Literata
-// 'IBM Plex Sans'
-// Karla
-// Poppins
-// 'Fira Sans'
-// 'Libre Franklin'
-// Inconsolata
-// Raleway
-// Oswald
-// 'Space Grotesk'
-// Urbanist
----
-
 <style is:inline>
   :root {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    /* Fonts */
+    --aw-font-sans: 'Inter Variable', sans-serif;
+    --aw-font-serif: 'Inter Variable', sans-serif;
+    --aw-font-heading: 'Inter Variable', sans-serif;
 
-    --aw-color-primary: rgb(138, 90, 68);  /* Lighter, warmer brown */
-    --aw-color-secondary: rgb(184, 115, 51); /* Copper */
-    --aw-color-accent:  rgb(110, 64, 16);   /* Deep, rich brown */ 
+    /* Colors (Light Mode) */
+    --aw-color-primary: #4A90E2; /* Cool Blue */
+    --aw-color-secondary: #70B7F0; /* Light Sky Blue */
+    --aw-color-accent: #2D5F98; /* Deep Blue */
 
-    --aw-color-text-heading: rgb(0, 0, 0);     /* Black for headings */
-    --aw-color-text-default: rgb(60, 60, 60);  /* Dark gray for body text */
-    --aw-color-text-muted: rgb(60, 60, 60 / 66%); /* Muted dark gray */
-    --aw-color-bg-page: rgb(255, 255, 255);   /* White background */
+    --aw-color-text-heading: #0D1B2A; /* Dark Navy */
+    --aw-color-text-default: #334E68; /* Soft Navy */
+    --aw-color-text-muted: #708090; /* Slate Gray */
+    --aw-color-bg-page: #F7FAFC; /* Light Cool Gray */
+    --aw-color-bg-card: #FFFFFF; /* True White */
 
-    --aw-color-bg-page-dark: rgb(0, 0, 0);    /* Keep black for dark mode */
     ::selection {
-      background-color: lavender;
+      background-color: #70B7F0; /* Light Sky Blue */
+      color: #0D1B2A; /* Dark Navy */
     }
   }
 
   .dark {
-    --aw-font-sans: 'Inter Variable';
-    --aw-font-serif: 'Inter Variable';
-    --aw-font-heading: 'Inter Variable';
+    /* Fonts */
+    --aw-font-sans: 'Inter Variable', sans-serif;
+    --aw-font-serif: 'Inter Variable', sans-serif;
+    --aw-font-heading: 'Inter Variable', sans-serif;
 
-    --aw-color-primary: rgb(110, 64, 16);   /* Deep, rich brown */
-    --aw-color-secondary: rgb(138, 90, 68); /* Lighter, warmer brown */ 
-    --aw-color-accent: rgb(184, 115, 51);  /* Copper */
+    /* Colors (Dark Mode) */
+    --aw-color-primary: #2D5F98; /* Deep Blue */
+    --aw-color-secondary: #4A90E2; /* Cool Blue */
+    --aw-color-accent: #70B7F0; /* Light Sky Blue */
 
-    --aw-color-text-heading: rgb(247, 248, 248);
-    --aw-color-text-default: rgb(229 236 246);
-    --aw-color-text-muted: rgb(229 236 246 / 66%);
-    --aw-color-bg-page: rgb(0 0 0);
+    --aw-color-text-heading: #E0E6ED; /* Light Gray-Blue */
+    --aw-color-text-default: #B8C5D3; /* Medium Gray-Blue */
+    --aw-color-text-muted: #A0AEC0; /* Muted Gray-Blue */
+    --aw-color-bg-page: #070f20; /* Rich Navy */
+    --aw-color-bg-card: #2D3748; /* Deep Gray-Blue */
 
-    --aw-color-input-text: black; /* Define a separate color for input text */
-    --aw-color-input-bg: white;  /* Define a separate background color for inputs */
+    /* Input Field Styling */
+    --aw-color-input-text: #FFFFFF; /* White */
+    --aw-color-input-bg: #4A5568;  /* Charcoal Gray */
 
     ::selection {
-      background-color: black;
-      color: snow;
+      background-color: #4A90E2; /* Cool Blue */
+      color: #F7FAFC; /* Light Cool Gray */
     }
   }
 </style>
