@@ -1,0 +1,138 @@
+ .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  list-style: none;
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column; /* Stack title below image */
+  align-items: center;   /* Center items horizontally */
+}
+
+.gallery-item-text {
+  text-align: center;     /* Center the text */
+  font-size: 0.8rem;      /* Slightly smaller font size */
+  color: #777;            /* Lighter text color */
+  margin-top: 0.5rem;     /* Add some space above the text */
+}
+
+.gallery-title {
+  margin-top: 0.5rem;    /* Add some space above the title */
+}
+
+.gallery-copyright{
+  font-size:.5em;
+  font-style: italic;    /* Italicize the copyright */
+}
+
+
+
+
+.pswp__custom-caption {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 12px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  text-align: center;
+  font-size: .9em;
+  z-index: 10;
+  border-radius: 5px;
+  max-width: 90%; /* Ensures it doesn't extend beyond the viewport */
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 600px) {
+  .pswp__custom-caption {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+
+/* General utility classes */
+.layout-fixed {
+  object-fit: cover;
+  object-position: top left;
+  width: var(--width, auto);
+  height: var(--height, auto);
+}
+
+.layout-constrained {
+  max-width: var(--width, 100%);
+  max-height: var(--height, 100%);
+  aspect-ratio: var(--aspect-ratio, auto);
+  width: 100%;
+}
+
+.layout-fullWidth {
+  width: 100%;
+  height: var(--height, auto);
+  aspect-ratio: var(--aspect-ratio, auto);
+}
+
+.layout-responsive {
+  width: 100%;
+  height: auto;
+  aspect-ratio: var(--aspect-ratio, auto);
+}
+
+.layout-contained {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  aspect-ratio: var(--aspect-ratio, auto);
+}
+
+.layout-cover {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  object-position:center;
+}
+
+/* Background utility for optional background handling */
+.background-image {
+  background-image: var(--background-url, none);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pagefind-ui__results-area{
+  background: #ccc !important;
+  padding:15px !important;
+}
+
+.py-20, .py-12{
+  padding-top:2em !important;
+  padding-bottom:2em !important;
+}
+
+
+input, textarea, select {
+  color: var(--aw-color-input-text);
+  background-color: var(--aw-color-input-bg);
+  padding:.5em;
+}

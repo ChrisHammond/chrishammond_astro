@@ -1,0 +1,123 @@
+---
+// BlogGallery.astro
+import path from 'path';
+import fs from 'fs/promises';
+import { Image } from 'astro:assets';
+import 'photoswipe/dist/photoswipe.css';
+import PhotoSwipeInit from '~/components/common/PhotoSwipeInit.astro';
+import { generateGalleryImages } from '~/utils/images';
+
+const { gallery } = Astro.props;
+
+if (!gallery) {
+  return null;
+}
+
+const breakpoints = [400, 768, 1024, 2040];
+const format = 'webp';
+const generatedImagesPath = path.join('./generated-images');
+const publicGalleryPath = path.join('./public/assets/images');
+
+// Process each gallery separately
+const processedGalleries = await Promise.all(
+  Object.entries(gallery).map(async ([galleryName, images]) => ({
+    galleryName,
+    images: await Promise.all(
+      images.map(async (image) => {
+        const srcPath = path.resolve(`.${image.image_path.replace('~/', '/src/')}`); // Correct the path resolution
+        const relativePath = path.relative('./src/assets/images', path.dirname(srcPath));
+        const outputDir = path.join(generatedImagesPath, relativePath);
+        const publicOutputDir = path.join(publicGalleryPath, relativePath);
+
+        try {
+          await fs.mkdir(outputDir, { recursive: true });
+
+          const resizedImages = await generateGalleryImages(
+            srcPath,
+            breakpoints,
+            format,
+            outputDir,
+            publicOutputDir
+          );
+
+          if (!resizedImages.images.length) {
+            console.warn(`No resized images found for: ${image.image_path}`);
+            return null;
+          }
+          //console.log('SrcSet:',resizedImages.srcset);
+
+          return {
+            ...image,
+            thumbnail: {
+              // Construct the correct path for the thumbnail
+              path: `/assets/images/${relativePath}/${resizedImages.images[0].path.split('/').pop()}`,
+              //path: `/assets/images${galleryPath.replace('/src/assets/images', '')}/${resizedImages.images[0].path.split('/').pop()}`,
+              width: resizedImages.images[0].width,
+              height: resizedImages.images[0].height,
+            },
+            fullImage: {
+              // Construct the correct path for the full image
+              path: `/assets/images/${relativePath}/${resizedImages.images[resizedImages.images.length - 1].path
+                .split('/')
+                .pop()}`,
+              width: resizedImages.images[resizedImages.images.length - 1].width,
+              height: resizedImages.images[resizedImages.images.length - 1].height,
+            },
+            srcset: resizedImages.srcset,
+          };
+        } catch (error) {
+          console.error(`Error processing image ${image.image_path}:`, error);
+          return null;
+        }
+      })
+    ),
+  }))
+);
+---
+
+{
+  processedGalleries.map(({ galleryName, images }) => (
+    <h2>{galleryName} Gallery</h2>
+    <div class="gallery" key={galleryName}>
+      {images.length > 0 ? (
+        <>
+          
+          {images.map((image, index) => (
+            <div class="gallery-item" key={index}>
+              <a 
+                href={image.fullImage.path} 
+                data-pswp-width={image.fullImage.width}
+                data-pswp-height={image.fullImage.height}
+                data-pswp-description={`${image['image-caption']}<br>- ${image['image-copyright']}`} 
+                data-srcset={image.srcset}
+              >
+                <Image 
+                  src={image.thumbnail.path}
+                  alt={image['image-caption']}
+                  width={image.thumbnail.width} 
+                  height={image.thumbnail.height} 
+                  loading="lazy"
+                  srcset={image.srcset}
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 30vw"
+                  format={format} 
+                />
+              </a>
+              <div class="gallery-item-text"> {/* Wrap text content */}
+                {image['image-caption'] && (
+                  <p class="gallery-caption">{image['image-caption']}</p>
+                )}
+                {image['image-copyright'] && (
+                  <p class="gallery-copyright">{image['image-copyright']}</p>
+                )}
+              </div>
+            </div>
+          ))}
+        </>
+      ) : (
+        <p>No images available for this gallery.</p>
+      )}
+    </div>
+  ))
+} 
+
+<PhotoSwipeInit />

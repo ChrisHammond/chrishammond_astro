@@ -1,0 +1,75 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import heroImage from '~/assets/images/hero-image.png';
+
+const metadata = {
+  title: "Thank you!",
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Explore More!',
+        href: '/about',
+        target: '_self',
+        icon: 'tabler:compass',
+      },
+      { text: 'View Projects', href: '/projects' },
+    ]}
+    image={{ src: heroImage, alt: 'Chris Hammond Hero Image', aspectRatio: '2:1.999' }}
+  >
+    <Fragment slot="title">
+      Thank you <span class="hidden xl:inline">for reaching out!</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">ChrisHammond.com</span> is your hub for tech, photography, racing, and more.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Latest from the Blog"
+    information={`Explore insights, tips, and stories from technology to photography and beyond.`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Learn More About Me!',
+        href: '/about',
+        target: '_self',
+        icon: 'tabler:info-circle',
+      },
+    ]}
+  >
+    <Fragment slot="title"> ChrisHammond.com </Fragment>
+
+    <Fragment slot="subtitle"> Discover projects, insights, and stories from my journey! </Fragment>
+  </CallToAction>
+</Layout>

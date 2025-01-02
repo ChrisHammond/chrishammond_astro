@@ -1,0 +1,177 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import heroImage from '~/assets/images/hero-image.png';
+
+const metadata = {
+  title: "Chris Hammond - Innovator, Creator, and Technologist | Christopher Hammond",
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Read more of my posts!',
+        href: '/blog',
+        target: '_self',
+        icon: 'tabler:glass',
+      },
+      { text: 'About us', href: '/about' },
+    ]}
+    image={{ src: heroImage, alt: 'Chris Hammond Hero Image', aspectRatio: '2:1.999' }}
+  >
+    <Fragment slot="title">
+      Welcome to the official website of Chris Hammond, a <span class="hidden xl:inline"></span>passionate technologist, creator, and innovator</span>. Explore projects, insights, and updates from Christopher Hammond, covering tech, photography, racing, and more.
+      <span class="text-accent dark:text-white highlight">Check out the latest additions!</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">You've come</span> to the right place for tech insights, photography tips, and more. Dive into the latest posts, projects, and updates from Chris Hammond.
+      </span>
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts
+    id="blog"
+    title="Check Out My Blog"
+    information={`Stay updated with news, reviews, and technology deep dives from me!`}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-yellow-50 dark:bg-transparent"></div>
+    </Fragment>
+  </BlogLatestPosts>
+
+  <Features
+    id="features"
+    tagline="Explore"
+    title="What You'll Find Here"
+    subtitle="ChrisHammond.com is a hub for creativity, technology, and personal insights, showcasing projects, hobbies, and expertise."
+    items={[
+      {
+        title: '💻 Tech Insights',
+        description: "Discover articles, tutorials, and updates on the latest tech trends and personal projects.",
+        icon: 'tabler:device-laptop',
+      },
+      {
+        title: '📷 Photography Adventures',
+        description: "Explore my passion for photography, featuring galleries, tips, and behind-the-scenes stories.",
+        icon: 'tabler:camera',
+      },
+      {
+        title: '🚗 Racing & Cars',
+        description: 'Dive into my love for racing and cars, including personal experiences and automotive projects.',
+        icon: 'tabler:car',
+      },
+      {
+        title: '📝 Personal Blog',
+        description:
+          "Read personal stories, insights, and musings on a variety of topics, from everyday life to creative pursuits.",
+        icon: 'tabler:writing',
+      },
+      {
+        title: '🌐 Community Connections',
+        description:
+          "Connect with a network of like-minded individuals and explore collaborative opportunities.",
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+
+  <!-- FAQs Widget ******************* -->
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Common questions about ChrisHammond.com and its content."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'What is ChrisHammond.com?',
+        description:
+          "ChrisHammond.com is the personal website of Chris Hammond, showcasing his passions for technology, photography, racing, and more.",
+      },
+      {
+        title: 'What kind of content can I find here?',
+        description:
+          "You'll find a mix of tech tutorials, photography galleries, racing projects, personal blog posts, and community connections.",
+      },
+      {
+        title: 'How can I get in touch with Chris Hammond?',
+        description:
+          "Feel free to reach out through the <a href='/contact' class='underline'>contact page</a>. I'd love to hear from you!",
+      },
+      {
+        title: 'Can I collaborate with Chris Hammond?',
+        description:
+          "Absolutely! Whether you're interested in technology, photography, or other shared interests, visit the <a href='/contact' class='underline'>contact page</a> to get started.",
+      },
+      {
+        title: 'What tools and technologies do you use?',
+        description:
+          "I work with a range of tools and technologies, including C#, React, Azure, and modern photography equipment. Check the blog for detailed insights!",
+      },
+      {
+        title: 'What’s your experience in racing?',
+        description:
+          "I've been involved in various racing projects and enjoy working on cars. Explore the site for stories, builds, and more!",
+      },
+      {
+        title: 'How can I support ChrisHammond.com?',
+        description:
+          "Sharing the site, engaging with the content, and providing feedback are great ways to support. Thank you for your interest!",
+      },
+    ]}
+  />
+
+
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    stats={[
+      { title: 'Years of Experience', amount: '25+' },
+      { title: 'Projects Completed', amount: '100+' },
+      { title: 'Photography Shots', amount: '1,000,000+' },
+      { title: 'Racing Events', amount: '50+' },
+    ]}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Discover More!',
+        href: '/about',
+        target: '_self',
+        icon: 'tabler:compass',
+      },
+    ]}
+  >
+    <Fragment slot="title"> ChrisHammond.com </Fragment>
+
+    <Fragment slot="subtitle"> Your hub for tech, photography, racing, and more! </Fragment>
+  </CallToAction>
+
+</Layout>

@@ -1,0 +1,106 @@
+---
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+
+import aboutImage from '~/assets/images/ChrisHammond.jpg';
+
+const metadata = {
+  title: 'About Chris Hammond',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 sm:px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <!-- Hero Widget ******************* -->
+
+    <Hero
+      tagline="About Chris Hammond"
+      image={{
+        src: aboutImage,
+        alt: 'Chris Hammond enjoying photography and technology.',
+      }}
+    >
+      <Fragment slot="title">
+        Welcome to 
+        <span class="text-accent dark:text-white highlight">ChrisHammond.com</span>
+      </Fragment>
+
+      <Fragment slot="subtitle">
+        A personal hub for my passions: technology, photography, racing, and creative pursuits. Explore my projects, insights, and journey.
+      </Fragment>
+    </Hero>
+
+    <!-- Stats Widget ****************** -->
+
+    <Stats
+      title="Milestones"
+      stats={[
+        { title: 'Years in Tech', amount: '25+' },
+        { title: 'Photography Shots', amount: '10,000+' },
+        { title: 'Racing Events', amount: '50+' },
+        { title: 'Projects Completed', amount: '100+' },
+      ]}
+    />
+
+    <!-- Features3 Widget ************** -->
+
+    <Features3
+      title="My Journey"
+      subtitle="Exploring creativity and innovation"
+      columns={3}
+      isBeforeContent={true}
+      items={[
+        {
+          title: 'Technology Enthusiast',
+          description:
+            "My love for technology spans decades, from coding solutions to developing innovative web projects.",
+          icon: 'tabler:device-laptop',
+        },
+        {
+          title: 'Photography Passion',
+          description:
+            'Capturing moments has always been a joy, whether through landscapes, events, or creative projects.',
+          icon: 'tabler:camera',
+        },
+        {
+          title: 'Racing Fanatic',
+          description:
+            "A lifelong love for cars and racing has inspired me to participate in events and document my experiences.",
+          icon: 'tabler:car',
+        },
+      ]}
+    />
+
+    <!-- Steps2 Widget ****************** -->
+
+    <Steps2
+      title="Highlights"
+      subtitle="Notable moments in my career and hobbies"
+      isReversed={true}
+      callToAction={{
+        text: 'Learn More About Me',
+        href: '/about',
+      }}
+      items={[
+        {
+          title: 'Tech Career Milestones',
+          description: 'Developed solutions for various industries, leveraging my expertise in C#, React, and Azure.',
+          icon: 'tabler:code',
+        },
+        {
+          title: 'Photography Projects',
+          description: 'Published stunning galleries and worked on collaborative visual storytelling projects.',
+          icon: 'tabler:photo',
+        },
+        {
+          title: 'Racing Adventures',
+          description: 'Competed in autocross events and documented unique automotive projects.',
+          icon: 'tabler:flag',
+        },
+      ]}
+    />
+  </section>
+</Layout>

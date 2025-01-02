@@ -1,0 +1,90 @@
+---
+---
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox';
+  import 'photoswipe/style.css';
+
+  function isPhonePortrait() {
+    return window.matchMedia('(max-width: 600px) and (orientation: portrait)').matches;
+  }
+
+  window.initPhotoSwipe = () => {
+    const gallery = document.querySelector('.gallery');
+    const children = gallery ? gallery.querySelectorAll('a') : null;
+
+    if (!gallery || !children || children.length === 0) {
+      return; // Exit if gallery or child links are missing
+    }
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '.gallery',
+      children: 'a',
+      initialZoomLevel: (zoomLevelObject) => {
+        return isPhonePortrait() ? zoomLevelObject.vFill : zoomLevelObject.fit;
+      },
+      secondaryZoomLevel: (zoomLevelObject) => {
+        return isPhonePortrait() ? zoomLevelObject.fit : 1;
+      },
+      pswpModule: () => import('photoswipe'),
+    });
+
+    // Add captions
+    lightbox.on('uiRegister', () => {
+      lightbox.pswp.ui.registerElement({
+        name: 'custom-caption',
+        className: 'pswp__custom-caption',
+        appendTo: 'wrapper',
+        html: '', // Placeholder for captions
+        onInit: (el, pswp) => {
+          pswp.on('change', () => {
+            const currSlideElement = pswp.currSlide?.data?.element || null;
+
+            let captionHTML = 'No caption available';
+            if (currSlideElement) {
+              const hiddenCaption = currSlideElement.getAttribute('data-pswp-description');
+              captionHTML = hiddenCaption || captionHTML;
+            }
+
+            el.innerHTML = captionHTML;
+          });
+        },
+      });
+    });
+
+    // Handle image content load
+    lightbox.on('contentLoad', (e) => {
+      if (e.isLazy) return;
+
+      const slide = e.content?.slide;
+      const element = slide?.data?.element;
+      const srcset = element?.getAttribute('data-srcset');
+
+      if (!slide || !element || !srcset) return;
+
+      // Handle immediate or deferred update
+      const updateImage = (container) => {
+        const img = container?.querySelector('img');
+        if (img) {
+          img.setAttribute('srcset', srcset);
+          img.setAttribute('sizes', '(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 30vw');
+        }
+      };
+
+      if (slide.container) {
+        updateImage(slide.container);
+      } else {
+        slide.pswp.on('afterAppendSlide', () => {
+          updateImage(slide.container);
+        });
+      }
+    });
+
+    lightbox.init();
+  };
+
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(() => {
+      window.initPhotoSwipe();
+    }, 500); // Ensure DOM is fully loaded
+  });
+</script>
