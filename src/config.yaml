@@ -11,7 +11,7 @@ metadata:
   title:
     default: Chris Hammond
     template: '%s — Chris Hammond'
-  description: Chris Hammond's home on the web, information about and from Chris out of St. Louis Missouri, a software developer, community advocate and more.
+  description: Chris Hammond's home on the web, information about and from Chris out of St. Louis Missouri, a technoogist, software developer, community advocate and more.
   robots:
     index: true
     follow: true
@@ -34,7 +34,7 @@ i18n:
 apps:
   blog:
     isEnabled: true
-    postsPerPage: 6
+    postsPerPage: 8
 
     post:
       isEnabled: true

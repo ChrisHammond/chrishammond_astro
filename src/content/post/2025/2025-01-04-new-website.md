@@ -7,6 +7,6 @@ excerpt: "UPDATE EXCERPT "
 keywords: "website, astro"
 tags: [ about ]
 # updateDate: 2024-11-22T11:23:45+00:00
-author: chris
+author: Chris Hammond
 ---
 More coming soon
