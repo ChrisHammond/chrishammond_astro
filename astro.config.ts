@@ -60,7 +60,9 @@ export default defineConfig({
     ),
     compress({
       CSS: true,
-      HTML: {
+      HTML: 
+      //false, 
+      {
         'html-minifier-terser': {
           removeAttributeQuotes: false,
         },
