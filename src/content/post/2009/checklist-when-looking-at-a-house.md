@@ -4,7 +4,8 @@ author: Chris Hammond
 publishDate: 2009-02-21T14:26:56
 updateDate: 2009-02-21T14:26:56
 tags: []
-excerpt: "So this blog post will be an ongoing work in progress, while making some blueberry muffins this morning I started coming up with a list of things to check when we are looking at houses. I’ll continually update and edit this list."
+excerpt: "Discover a helpful checklist for house hunting, created while baking blueberry muffins. Stay tuned for ongoing updates and tips!"
 url: /2009/checklist-when-looking-at-a-house  # Use the generated URL with year
 ---
 So this blog post will be an ongoing work in progress, while making some blueberry muffins this morning I started coming up with a list of things to check when we are looking at houses. I’ll continually update and edit this list.
+

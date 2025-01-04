@@ -4,7 +4,9 @@ author: ProjectVW.com
 publishDate: 2021-06-30T16:12:41
 updateDate: 2024-06-20T19:48:07
 tags: [ 'Cars', 'VW' ]
-excerpt: "Before the car was blue (painted in the summer of 1998 in Sedalia, Missouri), it was red.  It was a deep red, with a little sparkle to it. The car came this color when we acquired it in 1993(94?) in Fairfield, California. I honestly don&#39;t recall what the original color of the car was, likely a red or orange, but not the deep sparkly red it is in these photos.  These photos were most likely taken after I had washed the car out in front of the Lambda Chi Alpha Fraternity house in Rolla, Missouri.  You can see the bra that I had on the car, I believe it was on it when we acquired the car. When was the last time you saw a bra on a car? If you need one for a Porsche Boxster I happen to have one, new in box here in my basement.  If you look closely at the hubcaps, you can see I painted them. I completely forgot I did that until looking at these photos. You&#39;ll also see a silver pinstripe on the car, it is just vinyl, something acquired from an autoparts store and applied. That was most likely the first vinyl I ever applied to a car, lots more since.  I am still looking for this car if you happen to see it, let me know! Chassis Number: 1332543365 "
+excerpt: "Discover the colorful history of a vintage car, painted blue in 1998 after being red in 1993. Help locate the car with chassis number 1332543365! #vintagecar #carhistory"
 url: /2021/1973-volkswagen-super-beetle-red  # Use the generated URL with year
 ---
 <p>Before the car was blue (painted in the summer of 1998 in Sedalia, Missouri), it was red.</p>  <p>It was a deep red, with a little sparkle to it. The car came this color when we acquired it in 1993(94?) in Fairfield, California. I honestly don&#39;t recall what the original color of the car was, likely a red or orange, but not the deep sparkly red it is in these photos.</p>  <p>I am still looking for this car if you happen to see it, let me know! Chassis Number: 1332543365</p>  <p><a href="https://www.projectvw.com/1973-volkswagen-super-beetle-red">Read More at www.projectvw.com</a></p> 
+
+

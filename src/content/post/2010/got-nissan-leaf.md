@@ -4,7 +4,7 @@ author: Chris Hammond
 publishDate: 2010-04-30T03:34:50
 updateDate: 2013-01-29T10:04:17
 tags: [ 'Car', 'DotNetNuke', 'Electric', 'Electric Car', 'Electric Vehicle', 'EV', 'Leaf', 'Nissan', 'Nissan Leaf', 'Project' ]
-excerpt: "Updates for a new blog/forum I setup for the Nissan Leaf."
+excerpt: "Excited for the Nissan Leaf? Check out my new website leafowner.com for the latest news and forums. Join the conversation! #NissanLeaf #electriccar"
 url: /2010/got-nissan-leaf  # Use the generated URL with year
 image: ~/assets/images/PublishThumbnails/WindowsLiveWriter/GotNissanLeaf_7FF/leaf-black_2.png
 ---
@@ -21,3 +21,4 @@ I still need to get a logo together, any designers out there interested in putti
 Chris Hammond excited about an electric car? Yeah, weird eh? but I'm all about this! Stay tuned!
  
 <a href="/assets/images/PublishThumbnails/WindowsLiveWriter/GotNissanLeaf_7FF/leaf-black_2.png"><br /> <img width="244" height="84" title="leaf-black" style="display: inline;border: 0px;" alt="leaf-black" src="/assets/images/PublishThumbnails//WindowsLiveWriter/GotNissanLeaf_7FF/leaf-black_thumb.png" /></a>
+

@@ -4,7 +4,7 @@ author: Chris Hammond
 publishDate: 2008-09-29T23:50:00
 updateDate: 2008-09-29T23:50:00
 tags: []
-excerpt: "So I made it back from Boston in one piece today, my mother-in-law picked me up from the airport and brought me home so I could drop my things off and head to the office. "
+excerpt: "Read about a day in the life of a busy traveler, from Boston back home to planning a trip to Dubai. And a fun day at Fenway Park!"
 image: ~/assets/images/PublishThumbnails/WindowsLiveWriter/Anothertripdown_13A22/IMG_0120_2.jpg
 url: /2008/another-trip-down  # Use the generated URL with year
 ---

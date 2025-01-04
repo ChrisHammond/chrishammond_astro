@@ -4,7 +4,7 @@ author: Chris Hammond
 publishDate: 2012-02-13T00:58:15
 updateDate: 2025-01-03T12:22:15
 tags: [ 'Bicycle', 'Biking', 'Cancer', 'Davis', 'Family', 'Fitness', 'LIVESTRONG', 'LIVESTRONG Challenge' ]
-excerpt: "In 2012 I rode my first century, this blog post talks about some of the fundraising for that."
+excerpt: "Join me in supporting cancer research by donating to my LIVESTRONG Challenge. Riding 100 miles for a cause close to my heart. Learn more about my story."
 url: /2012/riding-in-the-livestrong-challenge-davis-2012  # Use the generated URL with year
 ---
 This year I said one of my goals is to ride in a century, a 100 mile bike ride. I’ve chosen the LIVESTRONG Challenge in Davis California on June 24, 2012.
@@ -29,4 +29,5 @@ I am riding the #LSCDavis for four people, all affected by cancer.
 <strong>One of my best friend's mother Janice</strong> was very recently diagnosed with breast cancer and is going through the treatment process now.
   
 These close friends and family are my motivation for doing the LIVESTRONG Challenge in Davis this year. As of January of 2012 the longest bike ride I've ever done was 30.3 miles, that was in August 2011. If all goes as planned, I will surpass that total multiple times this year. Please stay tuned to my training and ride results by checking out the <a href="/tags/livestrong">LIVESTRONG blog posts</a> here no my site.
+
 

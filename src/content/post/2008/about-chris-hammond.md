@@ -5,7 +5,7 @@ publishDate: 2008-01-24T01:03:29
 updateDate: 2025-01-03T11:30:10
 image: ~/assets/images/ChrisHammond.jpg
 tags: [ 'About' ]
-excerpt: "Meet Chris Hammond, a software professional from St. Louis with expertise in DNN and open source platforms. Connect at ChrisHammond.com and explore his GitHub contributions."
+excerpt: "Chris Hammond, a tech professional from St. Louis, MO, specializes in Software Development and Product Management. Discover his passion for hobbies and open source contributions."
 
 url: /2008/about-chris-hammond  # Use the generated URL with year
 ---
@@ -25,3 +25,5 @@ I collect hobbies, I currently partake in photography, computers, cars, racing, 
 
 
 You can find some of my open source contributions on my [GitHub Profile](https://github.com/chrishammond) and my career via my [LinkedIn Profile](https://www.linkedin.com/in/chrishammond/).
+
+

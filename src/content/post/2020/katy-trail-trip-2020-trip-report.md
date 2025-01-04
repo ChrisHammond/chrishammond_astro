@@ -4,7 +4,8 @@ author: BicycleTips.com
 publishDate: 2020-10-12T03:58:10
 updateDate: 2020-10-12T03:58:10
 tags: []
-excerpt: "Three bearded guys take on the Katy Trail across Missouri"
+excerpt: "Join three bearded guys on their adventure cycling the Katy Trail in Missouri. Follow their journey at www.bicycletips.com."
 url: /2020/katy-trail-trip-2020-trip-report  # Use the generated URL with year
 ---
 <p>Three bearded guys take on the Katy Trail across Missouri</p> <a href="https://www.bicycletips.com/home/2020/10/katy-trail-trip-2020-trip-report">Read More at www.bicycletips.com</a>
+
