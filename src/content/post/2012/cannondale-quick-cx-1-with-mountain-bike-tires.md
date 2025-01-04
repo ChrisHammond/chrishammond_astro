@@ -5,11 +5,7 @@ publishDate: 2012-01-21T03:16:27
 updateDate: 2012-01-21T03:16:27
 tags: [ 'Bicycle', 'Bike', 'Cannondale', 'Fitness' ]
 excerpt: "Transform your 2011 Cannondale Quick CX 1 for off-road adventures? Our trials show a 29x2.1 inch tire won't fit. Discover alternatives for versatile riding."
-url: /2012/cannondale-quick-cx-1-with-mountain-bike-tires  # Use the generated URL with year
----
 
-excerpt: "Discover the challenges faced while trying to turn a 2011 Cannondale Quick CX 1 into a semi mountain bike trail bike with 29x2.1” tires."
-url: /2012/cannondale-quick-cx-1-with-mountain-bike-tires  # Use the generated URL with year
 ---
 Last year I purchased a 2011 Cannondale Quick CX 1 to start riding on my quest to hit 500 miles for the year. I was able to do that fairly easily on the bike, it is a great machine.
   
@@ -22,6 +18,7 @@ My awesome brother sent me a set of 29x2.1” mountain bike tires, and I picked 
 So I guess the answer to the question, if the question is “Will a 29x2.1” tire fit on a 2011 Cannondale Quick CX 1?” is <strong>NO</strong>. Unfortunately it will not.
   
 I’m still going to try to find something that will work on the bike though, I would like to use it off road more, though I don’t think I’m ready to invest in a full on mountain bike anytime soon as I still see putting in a lot more road miles this year.
+
 
 
 
